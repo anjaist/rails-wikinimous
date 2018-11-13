@@ -1,6 +1,11 @@
 <div class="container">
   <div class="articles">
     <h1>Today's articles</h1>
+    <% if flash[:notice] %>
+      <div class="alert alert-info alert-dismissible fade in" role="alert">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
     <ul class="list-unstyled">
       <div class="row">
       <% @articles.each do |article| %>
