@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="articles">
+    <h1>Today's articles</h1>
+    <ul class="list-unstyled">
+      <div class="row">
+      <% @articles.each do |article| %>
+        <div class="col-xs-6">
+          <li><%= link_to "#{article.title}", article_path(article) %></li>
+        </div>
+      <% end %>
+      </div>
+    </ul>
+  </div>
+</div>
